@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230826 22:01:39.389" rpa="false" schemaversion="4">
+<suite id="s1" name="Robotframework" source="C:\narmada\Robotframework">
+<suite id="s1-s1" name="Helloworld" source="C:\narmada\Robotframework\Helloworld.robot">
+<test id="s1-s1-t1" name="LoginApplication" line="5">
+<kw name="Open Browser">
+<arg>https://www.zalando.se/kvinna-home/</arg>
+<arg>Chrome</arg>
+<msg timestamp="20230826 22:01:39.507" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20230826 22:01:39.503" endtime="20230826 22:01:39.516"/>
+</kw>
+<kw name="click element">
+<arg>xpath://body/div[4]/div[1]/x-wrapper-pre-shell[1]/x-wrapper-re-1-9[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/a[1]/div[1]/div[1]/button[1]/span[1]/*[1]</arg>
+<status status="NOT RUN" starttime="20230826 22:01:39.524" endtime="20230826 22:01:39.535"/>
+</kw>
+<kw name="input text">
+<arg>id:login.email</arg>
+<arg>narmada.nalubolu@gmail.com</arg>
+<status status="NOT RUN" starttime="20230826 22:01:39.544" endtime="20230826 22:01:39.552"/>
+</kw>
+<kw name="input text">
+<arg>id:login.secret</arg>
+<arg>Snpi2017&amp;20#</arg>
+<status status="NOT RUN" starttime="20230826 22:01:39.561" endtime="20230826 22:01:39.568"/>
+</kw>
+<kw name="click element">
+<arg>Xpath://*[@id="sso"]/div/div[2]/main/div/div[2]/div/div/div/form/button</arg>
+<status status="NOT RUN" starttime="20230826 22:01:39.579" endtime="20230826 22:01:39.585"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" starttime="20230826 22:01:39.598" endtime="20230826 22:01:39.606"/>
+</kw>
+<status status="FAIL" starttime="20230826 22:01:39.499" endtime="20230826 22:01:39.614">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20230826 22:01:39.463" endtime="20230826 22:01:39.623"/>
+</suite>
+<status status="FAIL" starttime="20230826 22:01:39.397" endtime="20230826 22:01:39.634"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Helloworld">Robotframework.Helloworld</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230826 22:01:39.480" level="ERROR">Error in file 'C:\narmada\Robotframework\Helloworld.robot' on line 2: Importing library 'Seleniumlibrary' failed: ModuleNotFoundError: No module named 'Seleniumlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\narmada\Robotframework\lib
+  C:\narmada\Robotframework\resources
+  c:\Users\suresh\.vscode\extensions\d-biehl.robotcode-0.51.1\bundled\libs
+  c:\Users\suresh\.vscode\extensions\d-biehl.robotcode-0.51.1\bundled\tool\robotcode
+  C:\Users\suresh\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\suresh\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\suresh\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\suresh\AppData\Local\Programs\Python\Python311
+  C:\Users\suresh\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
