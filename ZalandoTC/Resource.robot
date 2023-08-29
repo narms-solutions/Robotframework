@@ -48,5 +48,5 @@ Validate the Header menu
     Log to console  ${menu_list}
     ${my_string}    Catenate    SEPARATOR=\  ${menu_list}
     #Log to console  ${my_string}
-    Should Contain  ${my_string}    Kvinna    Man    Barn  
+    Should Contain  ${my_string}    Kvinna      
    

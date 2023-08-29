@@ -1,0 +1,21 @@
+1693344707474	geckodriver	INFO	Listening on 127.0.0.1:54012
+1693344710663	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54013" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\suresh\\AppData\\Local\\Temp\\rust_mozprofilec2pS3v"
+1693344711873	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1693344711926	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1693344711926	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1693344711926	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1693344711927	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x37012D,name=PContent::Msg_AsyncMessage) Channel closing: too late to send/recv, messages will be lost
+
+1693344717133	Marionette	INFO	Listening on port 54022
+1693344717521	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.zalando.se/R6IEk7/P5Vnv7/BNN_Vjt/sCX/Matk4/Y3r54SDDEa/CzVVcTw7PwU/MmBGM/kVubWU, line 1: unreachable code after return statement
+1693344731878	Marionette	INFO	Stopped listening on port 54022
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
