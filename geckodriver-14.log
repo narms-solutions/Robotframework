@@ -1,0 +1,19 @@
+1693342199036	geckodriver	INFO	Listening on 127.0.0.1:62463
+1693342202129	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62464" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\suresh\\AppData\\Local\\Temp\\rust_mozprofile6okLlW"
+1693342202719	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1693342202749	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1693342202750	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1693342202750	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1693342202751	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1693342205887	Marionette	INFO	Listening on port 62474
+1693342206336	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.zalando.se/R6IEk7/P5Vnv7/BNN_Vjt/sCX/Matk4/Y3r54SDDEa/CzVVcTw7PwU/MmBGM/kVubWU, line 1: unreachable code after return statement
+1693342213193	Marionette	INFO	Stopped listening on port 62474
+JavaScript error: https://mosaic01.ztat.net/base-assets/7-0-4/sentry-4.6.4.min.js, line 2: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

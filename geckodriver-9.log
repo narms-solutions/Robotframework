@@ -1,0 +1,15 @@
+1693285433827	geckodriver	INFO	Listening on 127.0.0.1:49200
+1693285436965	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\suresh\\AppData\\Local\\Temp\\rust_mozprofilevhNuoD"
+1693285437655	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1693285437684	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1693285437686	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1693285437686	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1693285437687	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1693285441334	Marionette	INFO	Listening on port 49210
+1693285441821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.zalando.se/R6IEk7/P5Vnv7/BNN_Vjt/sCX/Matk4/Y3r54SDDEa/CzVVcTw7PwU/MmBGM/kVubWU, line 1: unreachable code after return statement
+1693285482519	Marionette	INFO	Stopped listening on port 49210
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

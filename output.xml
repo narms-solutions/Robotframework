@@ -1,115 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230828 01:02:39.502" rpa="false" schemaversion="4">
-<suite id="s1" name="HomePage" source="C:\narmada\Robotframework\ZalondoTC\HomePage.robot">
-<kw name="Open browser landing page" library="Resource" type="SETUP">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230829 23:26:11.779" rpa="false" schemaversion="4">
+<suite id="s1" name="GherkinStyle" source="C:\narmada\Robotframework\ZalandoTC\GherkinStyle.robot">
+<test id="s1-t1" name="ValidLoginTest in chrome" line="11">
+<kw name="Given Open chrome landing page">
+<kw name="Open browser landing page" library="Resource">
+<arg>chrome</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230828 01:02:39.784" level="INFO">Opening browser 'Chrome' to base url 'https://www.zalando.se/kvinna-home/'.</msg>
-<status status="PASS" starttime="20230828 01:02:39.783" endtime="20230828 01:02:45.132"/>
+<msg timestamp="20230829 23:26:12.110" level="INFO">Opening browser 'chrome' to base url 'https://www.zalando.se/kvinna-home/'.</msg>
+<status status="PASS" starttime="20230829 23:26:12.109" endtime="20230829 23:26:17.509"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230828 01:02:47.133" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230828 01:02:45.132" endtime="20230828 01:02:47.133"/>
+<msg timestamp="20230829 23:26:19.510" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230829 23:26:17.509" endtime="20230829 23:26:19.510"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230828 01:02:47.133" endtime="20230828 01:02:47.966"/>
+<status status="PASS" starttime="20230829 23:26:19.510" endtime="20230829 23:26:20.494"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:26:26.495" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230829 23:26:20.494" endtime="20230829 23:26:26.495"/>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<arg>4</arg>
+<arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230828 01:02:47.967" endtime="20230828 01:02:47.971"/>
+<status status="PASS" starttime="20230829 23:26:26.496" endtime="20230829 23:26:26.501"/>
 </kw>
-<status status="PASS" starttime="20230828 01:02:39.783" endtime="20230828 01:02:47.971"/>
-</kw>
-<test id="s1-t1" name="GetTheHeaderMenuList" line="10">
-<kw name="Accept cookies" library="Resource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath://button[@id='uc-btn-accept-banner']</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230828 01:02:47.974" endtime="20230828 01:02:48.063"/>
+<status status="PASS" starttime="20230829 23:26:26.501" endtime="20230829 23:26:26.558"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://button[@id='uc-btn-accept-banner']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230828 01:02:48.066" level="INFO">Clicking element 'xpath://button[@id='uc-btn-accept-banner']'.</msg>
-<status status="PASS" starttime="20230828 01:02:48.064" endtime="20230828 01:02:48.720"/>
+<msg timestamp="20230829 23:26:26.559" level="INFO">Clicking element 'xpath://button[@id='uc-btn-accept-banner']'.</msg>
+<status status="PASS" starttime="20230829 23:26:26.558" endtime="20230829 23:26:26.789"/>
 </kw>
-<status status="PASS" starttime="20230828 01:02:47.973" endtime="20230828 01:02:48.720"/>
+<status status="PASS" starttime="20230829 23:26:12.109" endtime="20230829 23:26:26.790"/>
 </kw>
+<status status="PASS" starttime="20230829 23:26:12.108" endtime="20230829 23:26:26.790"/>
+</kw>
+<kw name="When Open login page">
+<kw name="Navigate to Loginpage" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:header-user-account-icon</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:26.793" level="INFO">Clicking element 'id:header-user-account-icon'.</msg>
+<status status="PASS" starttime="20230829 23:26:26.792" endtime="20230829 23:26:29.945"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:26.792" endtime="20230829 23:26:29.945"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:26.791" endtime="20230829 23:26:29.945"/>
+</kw>
+<kw name="And Pass robot@test.com and Stockholm123" sourcename="Pass ${Email} and ${Password}">
+<kw name="Login with valid Credentials" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:login.email</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:29.947" level="INFO">Typing text 'robot@test.com' into text field 'id:login.email'.</msg>
+<status status="PASS" starttime="20230829 23:26:29.947" endtime="20230829 23:26:30.395"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:login.secret</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:30.397" level="INFO">Typing text 'Stockholm123' into text field 'id:login.secret'.</msg>
+<status status="PASS" starttime="20230829 23:26:30.396" endtime="20230829 23:26:30.771"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:29.947" endtime="20230829 23:26:30.771"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:29.946" endtime="20230829 23:26:30.772"/>
+</kw>
+<kw name="Then Login should Pass">
+<kw name="Submit Credentials" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[@id='sso']/div[1]/div[2]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:30.775" level="INFO">Clicking element '//body/div[@id='sso']/div[1]/div[2]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230829 23:26:30.774" endtime="20230829 23:26:30.950"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:30.774" endtime="20230829 23:26:30.951"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:30.773" endtime="20230829 23:26:30.951"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230829 23:26:30.956" endtime="20230829 23:26:33.476"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:12.108" endtime="20230829 23:26:33.477"/>
+</test>
+<test id="s1-t2" name="ValidLoginTest in firefox" line="16">
+<kw name="Given Open firefox landing page">
+<kw name="Open browser landing page" library="Resource">
+<arg>firefox</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230829 23:26:33.488" level="INFO">Opening browser 'firefox' to base url 'https://www.zalando.se/kvinna-home/'.</msg>
+<status status="PASS" starttime="20230829 23:26:33.486" endtime="20230829 23:26:43.325"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:26:45.326" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230829 23:26:43.326" endtime="20230829 23:26:45.326"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230829 23:26:45.326" endtime="20230829 23:26:45.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:26:51.332" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230829 23:26:45.331" endtime="20230829 23:26:51.332"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230829 23:26:51.332" endtime="20230829 23:26:51.390"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230829 23:26:51.391" endtime="20230829 23:26:51.683"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:51.685" level="INFO">Clicking element 'xpath://button[@id='uc-btn-accept-banner']'.</msg>
+<status status="PASS" starttime="20230829 23:26:51.683" endtime="20230829 23:26:52.919"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:33.485" endtime="20230829 23:26:52.919"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:33.484" endtime="20230829 23:26:52.919"/>
+</kw>
+<kw name="When Open login page">
+<kw name="Navigate to Loginpage" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:header-user-account-icon</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:52.924" level="INFO">Clicking element 'id:header-user-account-icon'.</msg>
+<status status="PASS" starttime="20230829 23:26:52.923" endtime="20230829 23:26:57.391"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:52.923" endtime="20230829 23:26:57.391"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:52.922" endtime="20230829 23:26:57.391"/>
+</kw>
+<kw name="And Pass robot@test.com and Stockholm123" sourcename="Pass ${Email} and ${Password}">
+<kw name="Login with valid Credentials" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:login.email</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:57.394" level="INFO">Typing text 'robot@test.com' into text field 'id:login.email'.</msg>
+<status status="PASS" starttime="20230829 23:26:57.393" endtime="20230829 23:26:57.683"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:login.secret</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:57.684" level="INFO">Typing text 'Stockholm123' into text field 'id:login.secret'.</msg>
+<status status="PASS" starttime="20230829 23:26:57.683" endtime="20230829 23:26:57.865"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:57.393" endtime="20230829 23:26:57.865"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:57.392" endtime="20230829 23:26:57.866"/>
+</kw>
+<kw name="Then Login should Pass">
+<kw name="Submit Credentials" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[@id='sso']/div[1]/div[2]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:26:57.870" level="INFO">Clicking element '//body/div[@id='sso']/div[1]/div[2]/main[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230829 23:26:57.869" endtime="20230829 23:26:58.313"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:57.868" endtime="20230829 23:26:58.313"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:57.868" endtime="20230829 23:26:58.313"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230829 23:26:58.314" endtime="20230829 23:27:04.848"/>
+</kw>
+<status status="PASS" starttime="20230829 23:26:33.481" endtime="20230829 23:27:04.850"/>
+</test>
+<test id="s1-t3" name="VerifyMenuItems in chrome" line="22">
+<kw name="Given Open chrome landing page">
+<kw name="Open browser landing page" library="Resource">
+<arg>chrome</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230829 23:27:04.860" level="INFO">Opening browser 'chrome' to base url 'https://www.zalando.se/kvinna-home/'.</msg>
+<status status="PASS" starttime="20230829 23:27:04.859" endtime="20230829 23:27:09.874"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:27:11.875" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230829 23:27:09.874" endtime="20230829 23:27:11.875"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230829 23:27:11.875" endtime="20230829 23:27:12.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:27:18.786" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230829 23:27:12.785" endtime="20230829 23:27:18.786"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230829 23:27:18.786" endtime="20230829 23:27:18.788"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230829 23:27:18.788" endtime="20230829 23:27:18.814"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:27:18.815" level="INFO">Clicking element 'xpath://button[@id='uc-btn-accept-banner']'.</msg>
+<status status="PASS" starttime="20230829 23:27:18.814" endtime="20230829 23:27:19.002"/>
+</kw>
+<status status="PASS" starttime="20230829 23:27:04.858" endtime="20230829 23:27:19.003"/>
+</kw>
+<status status="PASS" starttime="20230829 23:27:04.857" endtime="20230829 23:27:19.003"/>
+</kw>
+<kw name="When I should see the header menu">
+<kw name="Validate the Header menu" library="Resource">
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230828 01:02:50.462" level="INFO">Current location is 'https://www.zalando.se/kvinna-home/'.</msg>
-<status status="PASS" starttime="20230828 01:02:48.721" endtime="20230828 01:02:50.462"/>
+<msg timestamp="20230829 23:27:19.311" level="INFO">Current location is 'https://www.zalando.se/kvinna-home/'.</msg>
+<status status="PASS" starttime="20230829 23:27:19.005" endtime="20230829 23:27:19.312"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>${Header_menu}</var>
 <arg>xpath://body/div[4]/div[1]/x-wrapper-pre-shell[1]/x-wrapper-re-1-9[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20230828 01:02:50.574" level="INFO">${Header_menu} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4e6a1db9c756f43bc57e7d43f1cd2ac9", element="A56F0FFA96115953D613409983444719_element_83")&gt;]</msg>
-<status status="PASS" starttime="20230828 01:02:50.464" endtime="20230828 01:02:50.574"/>
+<msg timestamp="20230829 23:27:21.029" level="INFO">${Header_menu} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="637238c58dc05102e57849490481c203", element="3317A042B589791DEB0BF2BDEA37CB58_element_59")&gt;]</msg>
+<status status="PASS" starttime="20230829 23:27:19.312" endtime="20230829 23:27:21.029"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${menu_list}</var>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230828 01:02:50.575" level="INFO">${menu_list} = []</msg>
-<status status="PASS" starttime="20230828 01:02:50.575" endtime="20230828 01:02:50.575"/>
+<msg timestamp="20230829 23:27:21.029" level="INFO">${menu_list} = []</msg>
+<status status="PASS" starttime="20230829 23:27:21.029" endtime="20230829 23:27:21.029"/>
 </kw>
 <for flavor="IN">
 <var>${element}</var>
 <value>@{Header_menu}</value>
 <iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4e6a1db9c756f43bc57e7d43f1cd2ac9", element="A56F0FFA96115953D613409983444719_element_83")&gt;</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="637238c58dc05102e57849490481c203", element="3317A042B589791DEB0BF2BDEA37CB58_element_59")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${text}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230828 01:02:50.667" level="INFO">${text} = Kvinna
+<msg timestamp="20230829 23:27:21.055" level="INFO">${text} = Kvinna
 Man
 Barn</msg>
-<status status="PASS" starttime="20230828 01:02:50.576" endtime="20230828 01:02:50.667"/>
+<status status="PASS" starttime="20230829 23:27:21.030" endtime="20230829 23:27:21.055"/>
 </kw>
 <kw name="Append To List" library="Collections">
 <arg>${menu_list}</arg>
 <arg>${text}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230828 01:02:50.668" endtime="20230828 01:02:50.669"/>
+<status status="PASS" starttime="20230829 23:27:21.055" endtime="20230829 23:27:21.055"/>
 </kw>
-<status status="PASS" starttime="20230828 01:02:50.576" endtime="20230828 01:02:50.669"/>
+<status status="PASS" starttime="20230829 23:27:21.030" endtime="20230829 23:27:21.055"/>
 </iter>
-<status status="PASS" starttime="20230828 01:02:50.575" endtime="20230828 01:02:50.669"/>
+<status status="PASS" starttime="20230829 23:27:21.030" endtime="20230829 23:27:21.055"/>
 </for>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230828 01:02:50.670" endtime="20230828 01:02:50.671"/>
-</kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${menu_list}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230828 01:02:50.672" endtime="20230828 01:02:50.673"/>
+<status status="PASS" starttime="20230829 23:27:21.056" endtime="20230829 23:27:21.056"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${my_string}</var>
+<arg>SEPARATOR=\</arg>
+<arg>${menu_list}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20230829 23:27:21.057" level="INFO">${my_string} = ['Kvinna\nMan\nBarn']</msg>
+<status status="PASS" starttime="20230829 23:27:21.056" endtime="20230829 23:27:21.057"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${my_string}</arg>
+<arg>Kvinna</arg>
+<arg>Man</arg>
+<arg>Barn</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230829 23:27:21.057" endtime="20230829 23:27:21.057"/>
+</kw>
+<status status="PASS" starttime="20230829 23:27:19.005" endtime="20230829 23:27:21.057"/>
+</kw>
+<status status="PASS" starttime="20230829 23:27:19.004" endtime="20230829 23:27:21.057"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230828 01:02:50.674" endtime="20230828 01:02:53.371"/>
+<status status="PASS" starttime="20230829 23:27:21.058" endtime="20230829 23:27:23.688"/>
 </kw>
-<status status="PASS" starttime="20230828 01:02:47.971" endtime="20230828 01:02:53.372"/>
+<status status="PASS" starttime="20230829 23:27:04.855" endtime="20230829 23:27:23.689"/>
 </test>
-<status status="PASS" starttime="20230828 01:02:39.505" endtime="20230828 01:02:53.377"/>
+<test id="s1-t4" name="VerifyMenuItems in firefox" line="25">
+<kw name="Given Open firefox landing page">
+<kw name="Open browser landing page" library="Resource">
+<arg>firefox</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230829 23:27:23.697" level="INFO">Opening browser 'firefox' to base url 'https://www.zalando.se/kvinna-home/'.</msg>
+<status status="PASS" starttime="20230829 23:27:23.696" endtime="20230829 23:27:35.032"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:27:37.033" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230829 23:27:35.033" endtime="20230829 23:27:37.033"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230829 23:27:37.033" endtime="20230829 23:27:37.038"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230829 23:27:43.040" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230829 23:27:37.038" endtime="20230829 23:27:43.040"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230829 23:27:43.040" endtime="20230829 23:27:43.045"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230829 23:27:43.045" endtime="20230829 23:27:43.439"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@id='uc-btn-accept-banner']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230829 23:27:43.440" level="INFO">Clicking element 'xpath://button[@id='uc-btn-accept-banner']'.</msg>
+<msg timestamp="20230829 23:27:44.565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230829 23:27:44.566" level="FAIL">ElementNotInteractableException: Message: Element &lt;button id="uc-btn-accept-banner" class="uc-btn uc-btn-primary"&gt; could not be scrolled into view
+Stacktrace:
+WebDriverError@chrome://marionette/content/error.js:175:5
+ElementNotInteractableError@chrome://marionette/content/error.js:285:5
+webdriverClickElement@chrome://marionette/content/interaction.js:159:11
+interaction.clickElement@chrome://marionette/content/interaction.js:131:11
+clickElement/&lt;@chrome://marionette/content/listener.js:1341:28
+navigate/&lt;@chrome://marionette/content/listener.js:446:13
+navigate@chrome://marionette/content/listener.js:447:7
+clickElement@chrome://marionette/content/listener.js:1339:18
+</msg>
+<status status="FAIL" starttime="20230829 23:27:43.439" endtime="20230829 23:27:44.573"/>
+</kw>
+<status status="FAIL" starttime="20230829 23:27:23.696" endtime="20230829 23:27:44.573"/>
+</kw>
+<status status="FAIL" starttime="20230829 23:27:23.695" endtime="20230829 23:27:44.574"/>
+</kw>
+<kw name="When I should see the header menu">
+<status status="NOT RUN" starttime="20230829 23:27:44.575" endtime="20230829 23:27:44.575"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230829 23:27:44.576" endtime="20230829 23:27:50.709"/>
+</kw>
+<status status="FAIL" starttime="20230829 23:27:23.693" endtime="20230829 23:27:50.711">ElementNotInteractableException: Message: Element &lt;button id="uc-btn-accept-banner" class="uc-btn uc-btn-primary"&gt; could not be scrolled into view
+Stacktrace:
+WebDriverError@chrome://marionette/content/error.js:175:5
+ElementNotInteractableError@chrome://marionette/content/error.js:285:5
+webdriverClickElement@chrome://marionette/content/interaction.js:159:11
+interaction.clickElement@chrome://marionette/content/interaction.js:131:11
+clickElement/&lt;@chrome://marionette/content/listener.js:1341:28
+navigate/&lt;@chrome://marionette/content/listener.js:446:13
+navigate@chrome://marionette/content/listener.js:447:7
+clickElement@chrome://marionette/content/listener.js:1339:18
+</status>
+</test>
+<status status="FAIL" starttime="20230829 23:26:11.782" endtime="20230829 23:27:50.727"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="HomePage">HomePage</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="GherkinStyle">GherkinStyle</stat>
 </suite>
 </statistics>
 <errors>

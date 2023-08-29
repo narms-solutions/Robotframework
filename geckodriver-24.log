@@ -1,0 +1,25 @@
+1693344008462	geckodriver	INFO	Listening on 127.0.0.1:64828
+1693344011558	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64829" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\suresh\\AppData\\Local\\Temp\\rust_mozprofileHUwgpD"
+1693344012161	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1693344012193	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1693344012194	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1693344012194	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1693344012194	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1693344015678	Marionette	INFO	Listening on port 64835
+1693344015744	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.zalando.se/R6IEk7/P5Vnv7/BNN_Vjt/sCX/Matk4/Y3r54SDDEa/CzVVcTw7PwU/MmBGM/kVubWU, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.zalando.com/q7qtLhHK/SkHukP2/2dex-vH/hj/Qi9YGVi55a/QGtpNgFaBQ/aD/xyUF8eNCk, line 1: unreachable code after return statement
+1693344037234	Marionette	INFO	Stopped listening on port 64835
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
