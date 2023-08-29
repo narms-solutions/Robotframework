@@ -21,10 +21,10 @@ ValidLoginTest in firefox
    
 VerifyMenuItems in chrome
     Given Open browser landing page  chrome    
-    When I should see the header menu
+    Then I validate the menu have Kvinna in the list
 VerifyMenuItems in firefox
     Given Open browser landing page  firefox     
-    When I should see the header menu
+    Then I validate the menu have Kvinna in the list
     
 
    
@@ -42,7 +42,7 @@ Open chrome landing page
      Open browser landing page  chrome
 Open firefox landing page 
      Open browser landing page  firefox
-I should see the header menu
+I validate the menu have Kvinna in the list
     Validate the Header menu
 
 
